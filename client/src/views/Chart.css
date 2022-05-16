@@ -1,0 +1,20 @@
+#back-right {
+    display: block;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 20px;
+}
+
+ .xpFood{
+    width: 350px;
+    height: 350px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.piChart {
+    padding-top: 80px;
+}

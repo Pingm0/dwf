@@ -1,18 +1,18 @@
-require('dotenv').config()
-// console.log(process.env.SERVERPORT) 
+require("dotenv").config();
 const express = require('express');
-const cors = require('cors');
+const cookieParser = require('cookie-parser')
 const app = express();
+const cors = require('cors');
 
-require('./config/mongoose.config')
 
-app.use(cors({origin:"http://localhost:3000"}));
-app.use(express.json());                           
-app.use(express.urlencoded({ extended: true }));
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cookieParser())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); 
+
+require('./config/mongoose.config');    /* This is new */
 require('./routes/food.routes')(app);
+require('./routes/user.routes')(app);
 
 
-
-
-
-app.listen(process.env.SERVERPORT, () => console.log(`Listing on port: ${process.env.SERVERPORT}`));
+app.listen(process.env.MY_PORT, () => console.log(`Listening on port:${process.env.MY_PORT} `) );

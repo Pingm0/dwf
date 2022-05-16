@@ -17,6 +17,10 @@ const FoodSchema = new mongoose.Schema({
     },
     expirationDate: {
         type:Date
+    },
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"  
     }
 }, { timestamps: true });
 module.exports = mongoose.model('Food', FoodSchema);

@@ -1,0 +1,20 @@
+.display-header {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right:20px;
+
+}
+.todayis{
+    padding:10px 0 20px 0;
+}
+
+
+
+
+
+
+#red {
+    color: red;
+}
