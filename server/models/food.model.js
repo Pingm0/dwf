@@ -17,8 +17,8 @@ const FoodSchema = new mongoose.Schema({
     },
     purchaseDate: {
         type:Date,
-        required:[true,'Please Add purchase Date'],
-        get: value => value.toDateString()
+        required:[true,'Please Add purchase Date']
+        
     },
     expirationDate: {
         required:[true,'Please Add Expiration Date'],
