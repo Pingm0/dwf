@@ -13,10 +13,11 @@ function Chart() {
     const [expiredFood,setExpiredFood] = useState([])
     const [totalRec,setTotalRec] = useState('')
     const {username} = useParams('')
+    const expiredFoodLength = 0
 
       const data = [
-        {freshItems: 1, ExpiredItems: expiredFood.length},
-        {freshItems: 2, ExpiredItems: totalRec - expiredFood.length}
+        {position: 1, data: expiredFood.length},
+        {position: 2, data: totalRec - expiredFood.length}
       ];
 
     const [rend,setRen] = useState(false)
@@ -29,7 +30,10 @@ function Chart() {
             const respTotal = await axios.get(`http://localhost:8000/api/foodbyuser/${username}`,{withCredentials:true})
 
             setExpiredFood(resp.data)
+            console.log(resp)
             setTotalRec(respTotal.data.length)
+            console.log(respTotal.data.length)
+
             setRen(true)
 
         }
@@ -76,12 +80,13 @@ function Chart() {
           />
           <VictoryBar
             data={data}
-            x="freshItems"
-            y="ExpiredItems"
+            x="position"
+            y="data"
           />
         </VictoryChart>
           </div>
       </div>
+      {console.log(totalRec)}
     </div>
   )
 }

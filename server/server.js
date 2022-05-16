@@ -10,7 +10,7 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
-require('./config/mongoose.config');    /* This is new */
+require('./config/mongoose.config');   
 require('./routes/food.routes')(app);
 require('./routes/user.routes')(app);
 
