@@ -100,7 +100,7 @@ function Display() {
                       <td>{food.foodType}</td>
                       <td>{food.foodName}</td>
                       <td>{fpDate}</td>
-                      <td id={xpDate < today ? 'red' : null}>{xpDate} </td>
+                      <td id={xpDate <= today ? 'red' : null}>{xpDate} </td>
                       <td>{food.qty}</td>
                       <td><Link to={`/food/editfood/${food._id}/${userName}`} >Edit</Link>  | <Link to={'/food'} onClick={() => {deleteHandler(food._id)}}>Delete</Link> </td>
                     </tr>
