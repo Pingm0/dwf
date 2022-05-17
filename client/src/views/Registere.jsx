@@ -47,28 +47,28 @@ function Registere() {
                 </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>User Name: </label>
-                    <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="username" value={regInfo.username} type="text" />
+                    <input placeholder='user name' className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="username" value={regInfo.username} type="text" />
                 {erros.username ? <p id='red'>{erros.username.message}</p> : null}
                 </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>Name: </label>
-                    <input className='frm-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="name" value={regInfo.name} type="text" />
+                    <input placeholder='Enter your first or full name' className='frm-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="name" value={regInfo.name} type="text" />
                 {erros.name ? <p id='red'>{erros.name.message}</p> : null}
                 </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>Email: </label>
-                    <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="email" value={regInfo.email} type="email" />
+                    <input placeholder='Enter your Email' className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="email" value={regInfo.email} type="email" />
                 {erros.email ? <p id='red'>{erros.email.message}</p> : null}
                 </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>Password: </label>
-                    <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="password" value={regInfo.password} type="Password" />
+                    <input placeholder='Password' className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="password" value={regInfo.password} type="Password" />
                 {erros.password ? <p id='red'>{erros.password.message}</p> : null}
 
                 </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>Confirm Password: </label>
-                    <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="confirmPassword" value={regInfo.confirmPassword} type="Password" />
+                    <input placeholder=' Confirm Password' className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="confirmPassword" value={regInfo.confirmPassword} type="Password" />
                 {erros.confirmPassword ? <p id='red'>{erros.confirmPassword.message}</p> : null}
                 </div>
                 <button className="btn btn-success">Register</button>
