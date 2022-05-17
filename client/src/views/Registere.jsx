@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-import { useNavigate} from 'react-router-dom'
+import { useNavigate,Link} from 'react-router-dom'
 
 
 function Registere() {
@@ -40,7 +40,11 @@ function Registere() {
 
     return (
         <div className='container'>
+
             <form className='login-form align-items-center  ' onSubmit={regHand}>
+                <div id='back-right'>
+                        <Link to='/'> Back</Link>
+                </div>
                 <div className='login-from-element row mb-3'>
                     <label className='col-sm-1 col-form-label col-form-label-sm'>User Name: </label>
                     <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="username" value={regInfo.username} type="text" />

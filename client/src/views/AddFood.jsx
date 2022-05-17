@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-import { useNavigate} from 'react-router-dom'
+import { useNavigate,Link} from 'react-router-dom'
 import './AddFood.css'
 
 function AddFood() {
@@ -41,8 +41,12 @@ function AddFood() {
         }
     return (
         <div className='container' id='add-to'>
+
             <form onSubmit={onSubmitHandler}>
-            <div className="form-group row">
+                <div id='back-right'>
+                    <Link to='/food'> Back</Link>
+                </div>
+                <div className="form-group row">
                 <label  className="col-sm-2 col-form-label">Foot Type</label>
                 <div className="col-sm-10">
                     <select onChange={(e) => setFoodType(e.target.value)}>
