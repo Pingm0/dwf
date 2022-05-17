@@ -67,7 +67,7 @@ function Registere() {
                     <input className='form-control form-control-sm' onChange={(e) =>hadnleChange(e)} name="confirmPassword" value={regInfo.confirmPassword} type="Password" />
                 {erros.confirmPassword ? <p id='red'>{erros.confirmPassword.message}</p> : null}
                 </div>
-                <button>Register</button>
+                <button className="btn btn-success">Register</button>
             </form>
         </div>
     )
