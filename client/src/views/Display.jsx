@@ -69,7 +69,7 @@ function Display() {
         <div className='container'>
           <div className='display-header'>
             <h4>Hi {userName}</h4>
-            <p><Link to={'/add'}>Add Item</Link> | <Link to={`/chart/${userName}`}  >View Chart</Link> | <Link to={'/'} onClick={logout} >Logout</Link></p>
+            <p><Link to={'/add'}>Add Item</Link> | <Link to={`/chart/${userName}`}  >View Charts</Link> | <Link to={'/'} onClick={logout} >Logout</Link></p>
           </div>
           <div className='todayis'>
             <div>
