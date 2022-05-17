@@ -52,7 +52,7 @@ function Login(props) {
                 </div>
                 
                 <div className='login-btn-reg'>
-                    <button >Login</button>
+                    <button className="btn btn-success" >Login</button>
                     <p className='create-account'> <Link to='/reg'>Create Account / Register</Link></p>
                 </div>
 

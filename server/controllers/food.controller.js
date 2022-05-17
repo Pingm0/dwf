@@ -69,14 +69,14 @@ module.exports  = {
                 console.log(req.jwtpayload.username,"this is in if for jwt")
                 console.log(req.params.username,"this is in if for params")
             }else{
-                const findAndUpdate = await Food.findByIdAndUpdate({_id:req.params.id},req.body,{new:true,runValidators:true})
+                const findAndUpdate = await Food.findOneAndUpdate({_id:req.params.id},req.body,{new:true,runValidators:true})
                 console.log('recored updated ')
                 return res.json(findAndUpdate)
             }
     
         }catch(err) {
             console.log(err)
-            res.json(err)
+            res.status(400).json(err)
         }
 
     }),

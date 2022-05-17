@@ -87,7 +87,7 @@ function AddFood() {
                 {erros.qty ? <p id='red'>{erros.qty.message}</p> : null}
                 </div>
             </div>
-            <button className="btn btn-primary">Add</button>
+            <button className="btn btn-success">Add</button>
             </form>
             
         </div>
